@@ -2,9 +2,9 @@
   activerecord:
     models:
       admin: 
-        one: Administrador
-        other: Administradores
-      profile:
+        one: Usuário
+        other: Usuários
+      user:
         one: Perfil
         other: Perfils
     attributes:
@@ -13,7 +13,7 @@
         email: Email
         created_at: Criado em
         updated_at: Atualizado em
-      profile:
+      user:
         id: Código
         email: Email
         created_at: Criado em
