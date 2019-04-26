@@ -35,7 +35,7 @@ namespace :dev do
 
   private
 
-  def show_spinner(msg_start, msg_end = "Comolete!")
+  def show_spinner(msg_start, msg_end = "Complete!")
    spinner = TTY::Spinner.new("[:spinner] #{msg_start}")
    spinner.auto_spin
    yield
