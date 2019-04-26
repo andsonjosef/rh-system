@@ -1,5 +1,14 @@
 {
   "name": "rh-system",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "jquery": "3.3.1",
+    "jquery-easing": "^0.0.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/andsonjosef/rh-system.git",
+  "author": "andsonjosef <andson.josef@gmail.com>",
+  "license": "MIT"
 }
