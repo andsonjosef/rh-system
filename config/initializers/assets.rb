@@ -15,8 +15,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # lib assets
  Rails.application.config.assets.precompile += %w( sb-admin-2.js sb-admin-2.css 
                                                     gentelella.js gentelella.css gentelella-bootstrap.css
-                                                    img.jpg)
+                                                    img.png)
                             
 # vendors assets
-Rails.application.config.assets.precompile += %w( font-awesome-4.6.3/css/font-awesome.css jquery-2.2.3/dist/jquery.js  gentelella-bootstrap/bootstrap.js)
+Rails.application.config.assets.precompile += %w( font-awesome-4.6.3/css/font-awesome.css jquery-2.2.3/dist/jquery.js  gentelella-bootstrap/bootstrap.js malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js)
  
