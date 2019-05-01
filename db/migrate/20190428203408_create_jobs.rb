@@ -5,7 +5,7 @@ class CreateJobs < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :local
       t.string :salary
-      t.string :type
+      t.string :employment_type
       t.string :status
 
       t.timestamps

@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2019_04_28_203802) do
     t.text "description"
     t.string "local"
     t.string "salary"
-    t.string "type"
+    t.string "employment_type"
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
