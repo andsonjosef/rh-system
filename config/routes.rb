@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  namespace :admins_backoffice do
-    get 'jobs/index'
-  end
+ 
   namespace :users_backoffice do
     get 'welcome/index'
   end
@@ -10,10 +8,12 @@ Rails.application.routes.draw do
     get 'welcome/index'
   end
   namespace :profiles_backoffice do
-    get 'welcome/index'
+    get 'welcome/index' 
   end
   namespace :admins_backoffice do
     get 'welcome/index'
+    resources :admins, only: [:index]
+    resources :jobs, only: [:index, :edit]
   end
   devise_for :admins
 
