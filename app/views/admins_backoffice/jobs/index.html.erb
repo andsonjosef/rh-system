@@ -1,28 +1,35 @@
-<h1>Jobs</h1>
+<h1>Vagas de emprego</h1>
 <div class="table-responsive">
   <table class="table table-striped table-bordered table-hover">
       <thead>
           <tr>
-              <th>#</th>
-              <th>Email</th>
-              <th></th>
+              <th>Titulo</th>
+              <th>Descrição</th>
+              <th>Local</th>
+              <th>Salário</th>
+              <th>Tipo</th>
+               <th>Ações</th>
           </tr>
       </thead>
       <tbody>
           <% @jobs.each do |job| %>
-          <tr>
-              <td><%= job.id %></td>
-              <td><%= job.description %></td>
-              <td style="width: 100px">
-                <button type="button" class="btn btn-primary btn-circle">
-                  <i class="fa fa-edit"></i>
-                </button>
-                <button type="button" class="btn btn-danger btn-circle">
-                  <i class="fa fa-minus"></i>
-                </button>
-              </td>
-          </tr>
+            <tr>
+                <td><%= job.title %></td>
+                <td><%= job.description %></td>
+                <td><%= job.local %></td>
+                <td><%= job.salary %></td>
+                <td><%= job.employment_type %></td>
+                <td >
+                  <button type="button" class="btn btn-primary btn-circle">
+                    <i class="fa fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger btn-circle">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                </td>
+            </tr>
           <% end %>
       </tbody>
   </table>
 </div>
+

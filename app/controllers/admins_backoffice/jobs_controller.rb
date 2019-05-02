@@ -1,5 +1,5 @@
 class AdminsBackoffice::JobsController < AdminsBackofficeController
   def index
-    @jobs = Jobs.all
+    @jobs = Job.all
   end
 end
