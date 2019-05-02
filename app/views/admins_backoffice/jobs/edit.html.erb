@@ -5,6 +5,18 @@
   </div>
 </div>
 
+<div >
+<% if @job.errors.any? %>
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+
+             <ul>
+              <% @job.errors.full_messages.each do |message| %>
+                <li> <%= message %> </li>
+              <% end %>
+            </ul>
+        </div>
+<% end %>
 <%= form_with(model: [ :admins_backoffice, @job ], local: true) do |form| %>
 
     <div class="form-group">
@@ -37,4 +49,5 @@
     <button type="submit" class="btn btn-info">Salvar</button>
  <% end %>
 
+</div>
 
