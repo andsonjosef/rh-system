@@ -20,9 +20,10 @@
                 <td><%= job.salary %></td>
                 <td><%= job.employment_type %></td>
                 <td >
-                  <button type="button" class="btn btn-primary btn-circle">
-                    <i class="fa fa-edit"></i>
-                  </button>
+              
+                 <%= link_to edit_admins_backoffice_job_path(job), class:"btn btn-primary btn-circle" do %> 
+                  <i class="fa fa-edit"></i>
+                 <% end %>
                   <button type="button" class="btn btn-danger btn-circle">
                     <i class="fa fa-minus"></i>
                   </button>
