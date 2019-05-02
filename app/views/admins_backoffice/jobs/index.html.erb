@@ -35,9 +35,11 @@
                  <%= link_to edit_admins_backoffice_job_path(job), class:"btn btn-primary btn-circle" do %> 
                   <i class="fa fa-edit"></i>
                  <% end %>
-                  <button type="button" class="btn btn-danger btn-circle">
-                    <i class="fa fa-minus"></i>
-                  </button>
+
+                 <%= link_to admins_backoffice_job_path(job), method: :delete, class: "btn btn-danger btn-circle", data: { confirm: "Deseja realmente excluir?" } do %>
+                  <i class="fa fa-minus"></i>
+                <% end %>
+              
                 </td>
             </tr>
           <% end %>

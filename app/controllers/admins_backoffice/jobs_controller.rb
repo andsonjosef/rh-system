@@ -1,5 +1,5 @@
 class AdminsBackoffice::JobsController < AdminsBackofficeController
-  before_action :set_job, only: [:edit, :update]
+  before_action :set_job, only: [:edit, :update, :destroy]
   
   def index
     @jobs = Job.all
@@ -15,6 +15,14 @@ class AdminsBackoffice::JobsController < AdminsBackofficeController
       redirect_to admins_backoffice_jobs_path, notice: "Vaga Cadastrada com sucesso!"
     else
       render :new
+    end
+  end
+
+  def destroy
+    if @job.destroy
+    redirect_to admins_backoffice_jobs_path, notice: "Vaga excluída com sucesso!"
+    else
+    render :index
     end
   end
 
