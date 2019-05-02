@@ -40,12 +40,12 @@ ActiveRecord::Schema.define(version: 2019_04_28_203802) do
   end
 
   create_table "jobs", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "local"
-    t.string "salary"
-    t.string "employment_type"
-    t.string "status"
+    t.string "title", null: false
+    t.text "description", null: false
+    t.string "local", null: false
+    t.string "salary", null: false
+    t.string "employment_type", null: false
+    t.string "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

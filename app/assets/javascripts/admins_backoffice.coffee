@@ -11,3 +11,5 @@
 //= require jquery-easing/jquery.easing.1.3.js
 
 //= require sb-admin-2
+
+//= require bootstrap-growl-ifightcrime/jquery.bootstrap-growl
