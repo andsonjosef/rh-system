@@ -8,7 +8,7 @@ class CreateJobs < ActiveRecord::Migration[5.2]
       t.string :employment_type, null: false
       t.string :status, null: false
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

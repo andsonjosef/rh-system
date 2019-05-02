@@ -44,7 +44,7 @@ task add_fake_jobs: :environment do
       local: Faker::Address.city,
       salary: Faker::Commerce.price(range = 1000.0..5000.0, as_string = true),
       employment_type: Faker::Job.employment_type,
-      status: 'Disponível'
+      status: "Disponível"
     )
     end
 end

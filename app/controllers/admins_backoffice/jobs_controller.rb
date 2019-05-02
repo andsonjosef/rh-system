@@ -5,13 +5,25 @@ class AdminsBackoffice::JobsController < AdminsBackofficeController
     @jobs = Job.all
   end
 
-  def edit 
+  def new 
+    @job = Job.new
+  end
 
+  def create
+    @job = Job.new(params_job)
+    if @job.save
+      redirect_to admins_backoffice_jobs_path, notice: "Vaga Cadastrada com sucesso!"
+    else
+      render :new
+    end
+  end
+
+  def edit 
   end
 
   def update 
     if @job.update(params_job)
-      redirect_to admins_backoffice_jobs_path, notice: "Vaga atualizada"
+      redirect_to admins_backoffice_jobs_path, notice: "Vaga atualizada com sucesso!"
     else
       render :edit
     end
