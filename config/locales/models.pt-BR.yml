@@ -13,6 +13,11 @@
         email: Email
         created_at: Criado em
         updated_at: Atualizado em
+        title: Titulo
+        description: Descrição
+        salary: Salário
+        employment_type: Tipo
+   
       user:
         id: Código
         email: Email
