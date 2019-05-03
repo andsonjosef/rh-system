@@ -2,7 +2,7 @@ class AdminsBackoffice::JobsController < AdminsBackofficeController
   before_action :set_job, only: [:edit, :update, :destroy]
   
   def index
-    @jobs = Job.all
+    @jobs = Job.all.page(params[:page]).per(10)
   end
 
   def new 
