@@ -1,0 +1,8 @@
+'pt-BR':
+  placeholders:
+        actions: Ações
+        description: Descrição
+        local: Local      
+        salary: Salário
+        title: Título
+        type: Tipo       

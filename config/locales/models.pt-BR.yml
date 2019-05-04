@@ -7,6 +7,9 @@
       user:
         one: Perfil
         other: Perfils
+      job:
+        one: Vaga
+        other: Vagas
     attributes:
       admin:
         id: Código
@@ -23,3 +26,16 @@
         email: Email
         created_at: Criado em
         updated_at: Atualizado em
+      
+      job: 
+        actions: Ações
+        add_job_opportunities: Adicionar vaga
+        description: Descrição
+        edit_job_opportunities: Editar vaga
+        local: Local      
+        salary: Salário
+        title: Título
+        type: Tipo       
+        job_opportunities: Vagas de Empregos
+        
+        
