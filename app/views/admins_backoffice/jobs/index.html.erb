@@ -1,11 +1,11 @@
 
 <div class="row">
   <div class="col-lg-10">
-    <h1 class="page-header">Vagas de emprego</h1>
+    <h1 class="page-header"><%= translate_attribute(@jobs, :job_opportunities) %></h1>
   </div>
   <div class="col-lg-2">
    <%= link_to new_admins_backoffice_job_path, class:"btn btn-success" do %> 
-      <i class="fa fa-plus"></i> Adicionar vaga
+      <i class="fa fa-plus"></i> <%= translate_attribute(@jobs, :add_job_opportunities) %>
     <% end %>
   </div>
 </div>
@@ -14,12 +14,12 @@
   <table class="table table-striped table-bordered table-hover">
       <thead>
           <tr>
-              <th>Titulo</th>
-              <th>Descrição</th>
-              <th>Local</th>
-              <th>Salário</th>
-              <th>Tipo</th>
-               <th>Ações</th>
+              <th><%= translate_attribute(@jobs, :title) %></th>
+              <th><%= translate_attribute(@jobs, :description) %></th>
+              <th><%= translate_attribute(@jobs, :local) %></th>
+              <th><%= translate_attribute(@jobs, :salary) %></th>
+              <th><%= translate_attribute(@jobs, :type) %></th>
+              <th><%= translate_attribute(@jobs, :actions) %></th>
           </tr>
       </thead>
       <tbody>
@@ -36,7 +36,7 @@
                   <i class="fa fa-edit"></i>
                  <% end %>
 
-                 <%= link_to admins_backoffice_job_path(job), method: :delete, class: "btn btn-danger btn-circle", data: { confirm: "Deseja realmente excluir?" } do %>
+                 <%= link_to admins_backoffice_job_path(job), method: :delete, class: "btn btn-danger btn-circle", data: { confirm:  t('messages.confirm_with', item: job.title ) } do %>
                   <i class="fa fa-minus"></i>
                 <% end %>
               
@@ -45,5 +45,8 @@
           <% end %>
       </tbody>
   </table>
+  <div class="text-center">
+     <%= paginate @jobs %>
+  </div>
 </div>
 
