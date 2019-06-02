@@ -33,6 +33,14 @@ class AdminsBackoffice::JobsController < AdminsBackofficeController
     if @job.update(params_job)
       redirect_to admins_backoffice_jobs_path, notice: "Vaga atualizada com sucesso!"
     else
+      if !@job.valid?
+        if @job.errors.full_messages.any? 
+          flash.now[:error] = "error: "
+          @job.errors.full_messages.each do |error_message| 
+            flash.now[:error] <<  error_message   
+          end 
+        end
+      end
       render :edit
     end
   end

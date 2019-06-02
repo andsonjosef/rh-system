@@ -393,6 +393,22 @@
    <%= javascript_include_tag 'application' %>
    <%= javascript_include_tag 'admins_backoffice' %>
   <!-- Bootstrap core JavaScript-->
+ 
+    
+   <% if flash %>
+     <% flash.each do |key, value| %>
+          <%= javascript_tag do %>
+            $.bootstrapGrowl('<%= value %>', {
+            type: 'danger',
+            align: 'right',
+            allow_dismiss: true,
+            stackup_spacing: 10
+            });
+          <% end %>
+      <% end %>
+    <% end %>
+    
+
 
 <% if notice %>
   <%= javascript_tag do %>
